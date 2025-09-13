@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ticket Generation</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inconsolata:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="shortcut icon"
+      href="img/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- <img class="background_mobile" src="img/background-mobile.png" alt="img" />
+    <img class="lines" src="img/pattern-lines.svg" alt="img" />
+    <img
+      class="background_tablet"
+      src="img/background-tablet.png"
+      alt="img"
+      hidden
+    />
+    <img
+      class="background_desktop"
+      src="img/background-desktop.png"
+      alt="img"
+      hidden
+    /> -->
+    <header>
+      <img class="logo" src="img/logo-full.svg" alt="img" />
+      <img class="line_top" src="img/pattern-squiggly-line-top.svg" alt="img" />
+    </header>
+    <h1 id="H1">You Journey To Couding Conf 2025 Starts Here!</h1>
+    <p id="HeaderParagrap">
+      Secure your spot at next year's biggest coding conference.
+    </p>
+    <!-- drag and drop container -->
+    <h2 class="h2">Upload Avatar</h2>
+    <div
+      class="DragAndDrop_container"
+      id="dropZone"
+      tabindex="0"
+      role="button"
+      aria-label="Upload image or drop it here"
+    >
+      <img
+        class="img_uploader"
+        src="img/icon-upload.svg"
+        alt="Upload"
+        id="uploadIcon"
+      />
+      <div class="dd_instructions">
+        <p id="ddText">Drag and drop or upload img</p>
+        <!-- <p class="file_name" id="fileName"></p> -->
+      </div>
+
+      <!-- preview-wrapper (მაქს ერთი preview იქნება) -->
+      <!-- ეს არის ატვირტული სურთი -->
+      <div class="preview_wrapper" id="previewWrapper" aria-live="polite"></div>
+
+      <!-- დამალული file input -->
+      <input
+        type="file"
+        id="fileInput"
+        accept="image/*"
+        style="display: none"
+      />
+      <div class="Twobtns">
+        <button class="removeBtn">Remove Img</button>
+        <button class="changeBtn">Change Img</button>
+      </div>
+    </div>
+    <div class="upload_your_photo">
+      <img src="img/icon-info.svg" alt="img" />
+      Upload you photo (JPG or PNGm max size:500px)
+    </div>
+
+    <!-- form tags begins here -->
+
+    <form class="form_section">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email Address</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="example@email.com"
+        required
+      />
+
+      <label for="github">GitHub Username</label>
+      <input
+        type="text"
+        id="github"
+        name="github"
+        placeholder="@yourusername"
+      />
+
+      <input id="submit" type="submit" value="Generate My Ticket" />
+    </form>
+    <img
+      class="line_bottom_mobile_tablet"
+      src="img/pattern-squiggly-line-bottom-mobile-tablet.svg"
+      alt="img"
+    />
+    <!-- TICKET section starts here -->
+    <div class="ticket" hidden>
+      <div class="mark_div">
+        <img class="mark" src="img/logo-mark.svg" alt="img" />
+        <div class="mark_div_txt">
+          <p class="couding_conf">Couding Conf</p>
+          <p class="new_date"></p>
+        </div>
+
+        <div class="ticket_IMG_div">
+          <div class="IMG_div"></div>
+          <div class="ticket_IMG_fullname"></div>
+          <div class="ticket_IMG_github"></div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
